@@ -10,6 +10,12 @@ public class SuperArray {
     capacity = 10;
   }
 
+  public SuperArray(int initialCapacity) {
+    data = new String[initialCapacity];
+    size = 0;
+    capacity = initialCapacity;
+  }
+
   public int size() {
     return size;
   }
@@ -38,12 +44,12 @@ public class SuperArray {
   }
 
   private void resize() {
-    String[] bigData = new String[capacity + 10];
+    String[] bigData = new String[capacity * 2];
     for (int i = 0; i < size; i++) {
       bigData[i] = data[i];
     }
     data = bigData;
-    capacity += 10;
+    capacity = capacity * 2;
   }
 
   public boolean isEmpty(){
@@ -83,10 +89,4 @@ public class SuperArray {
     return false;
   }
 
-  public SuperArray(int initialCapacity) {
-    data = new String[initialCapacity];
-    size = 0;
-    capacity = initialCapacity;
-  }
-  
 }
