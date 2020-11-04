@@ -106,4 +106,13 @@ public class SuperArray {
     }
     size--;
   }
+
+  public int indexOf(String s) {
+    for (int i = 0; i < data.length; i++) {
+      if(data[i] == s){
+        return i;
+      }
+    }
+    return -1;
+  }
 }

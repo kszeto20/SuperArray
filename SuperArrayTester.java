@@ -89,5 +89,7 @@ public class SuperArrayTester {
     test.remove(5);
     System.out.println(test);
     System.out.println(test.get(5));
+
+    System.out.println(test.indexOf("hello20"));
   }
 }
