@@ -89,4 +89,14 @@ public class SuperArray {
     return false;
   }
 
+  public void add (int index, String element) {
+    if (size + 1 >= capacity) {
+      resize();
+    }
+    for (int i = size + 1; i > index; i--) {
+      data[i] = data[i - 1];
+    }
+    data[index] = element;
+    size++;
+  }
 }

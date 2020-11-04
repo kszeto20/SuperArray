@@ -82,5 +82,8 @@ public class SuperArrayTester {
     SuperArray next = new SuperArray(500);
     System.out.println(next.cap());
 
+    test.add(5, "hello");
+    System.out.println(test);
+
   }
 }
