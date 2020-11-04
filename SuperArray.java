@@ -14,22 +14,17 @@ public class SuperArray {
     return size;
   }
 
-  //public int cap() {
-    //return capacity;
-  //}
+  public int cap() {
+    return capacity;
+  }
 
   public boolean add(String element) {
     if (size >= capacity) {
       resize();
-      data[size] = element;
-      size++;
-      return true;
     }
-    else {
-      data[size] = element;
-      size++;
-      return true;
-    }
+    data[size] = element;
+    size++;
+    return true;
   }
 
   public String get(int index) {
@@ -43,7 +38,7 @@ public class SuperArray {
   }
 
   private void resize() {
-    String[] bigData = new String[size + 10];
+    String[] bigData = new String[capacity + 10];
     for (int i = 0; i < size; i++) {
       bigData[i] = data[i];
     }
