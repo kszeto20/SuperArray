@@ -70,4 +70,23 @@ public class SuperArray {
     }
     return full;
   }
+
+  public boolean contains(String s) {
+    if (size == 0){
+      return false;
+    }
+    for (int i = 0; i < data.length; i++) {
+      if (data[i] == s) {
+        return true;
+      }
+    }
+    return false;
+  }
+  /*
+  public SuperArray(int initialCapacity) {
+    data = new String[initialCapacity];
+    size = 0;
+    capacity = initialCapacity;
+  }
+  */
 }
