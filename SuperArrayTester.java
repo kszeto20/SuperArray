@@ -84,6 +84,10 @@ public class SuperArrayTester {
 
     test.add(5, "hello");
     System.out.println(test);
+    System.out.println(test.get(5));
 
+    test.remove(5);
+    System.out.println(test);
+    System.out.println(test.get(5));
   }
 }
