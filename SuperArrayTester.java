@@ -70,16 +70,17 @@ public class SuperArrayTester {
 
     System.out.println(test.isEmpty());
 
-    
+    /*
     test.clear();
     System.out.println(test);
-
+    */
 
     System.out.println();
     System.out.println(test.contains("hello192847298"));
-    /*
+
     System.out.println();
-    SuperArray next = SuperArray()
-    */
+    SuperArray next = new SuperArray(500);
+    System.out.println(next.cap());
+
   }
 }

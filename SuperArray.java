@@ -82,11 +82,11 @@ public class SuperArray {
     }
     return false;
   }
-  /*
+
   public SuperArray(int initialCapacity) {
     data = new String[initialCapacity];
     size = 0;
     capacity = initialCapacity;
   }
-  */
+  
 }
