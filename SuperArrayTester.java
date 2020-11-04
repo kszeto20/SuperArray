@@ -3,6 +3,7 @@ public class SuperArrayTester {
 
     SuperArray test = new SuperArray();
 
+    System.out.println(test.isEmpty());
     System.out.println(test.size());
     System.out.println(test.add("hello0"));
     System.out.println(test.size());
@@ -54,8 +55,22 @@ public class SuperArrayTester {
     System.out.println();
 
 
+
     System.out.println(test.get(0));
-    System.out.println(test.set(0, "heyhey"));
-    System.out.println(test.set(0, "hiheyhello"));
+    System.out.println(test.get(1));
+    System.out.println(test.get(2));
+    System.out.println(test.get(3));
+    System.out.println(test.get(4));
+    System.out.println(test.get(5));
+    System.out.println(test.get(6));
+    System.out.println(test.get(7));
+    System.out.println(test.get(8));
+    System.out.println(test.get(9));
+    System.out.println(test.get(10));
+
+    System.out.println(test.isEmpty());
+
+    test.clear();
+    System.out.println(test);
   }
 }

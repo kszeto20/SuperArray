@@ -45,4 +45,29 @@ public class SuperArray {
     data = bigData;
     capacity += 10;
   }
+
+  public boolean isEmpty(){
+    if (size == 0) {
+      return true;
+    }
+    return false;
+  }
+
+  public void clear() {
+    data = new String[10];
+    size = 0;
+  }
+
+  public String toString() {
+    String full = "[";
+    for (int i = 0; i < data.length - 1; i++) {
+      if (i < data.length - 2) {
+        full += data[i] + ", ";
+      }
+      else {
+        full = full + data[size] + "]";
+      }
+    }
+    return full;
+  }
 }
