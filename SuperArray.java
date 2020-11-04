@@ -66,15 +66,11 @@ public class SuperArray {
 
   public String toString() {
     String full = "[";
-    for (int i = 0; i < data.length - 1; i++) {
-      if (i < data.length - 2) {
+    for (int i = 0; i < size - 1; i++) {
         full += data[i] + ", ";
       }
-      else {
-        full = full + data[size] + "]";
-      }
-    }
-    return full;
+        full = full + data[size - 1] + "]";
+        return full;
   }
 
   public boolean contains(String s) {
