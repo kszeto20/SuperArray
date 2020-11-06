@@ -67,7 +67,7 @@ public class SuperArray {
   public String toString() {
     String full = "[";
     for (int i = 0; i < size - 1; i++) {
-        full += data[i] + ", ";
+        full = full + data[i] + ", ";
       }
         full = full + data[size - 1] + "]";
         return full;
@@ -77,7 +77,7 @@ public class SuperArray {
     if (size == 0){
       return false;
     }
-    for (int i = 0; i < data.length; i++) {
+    for (int i = 0; i < size; i++) {
       if (data[i] == s) {
         return true;
       }
@@ -106,12 +106,13 @@ public class SuperArray {
   }
 
   public int indexOf(String s) {
-    for (int i = 0; i < data.length; i++) {
-      if(data[i] == s){
-        return i;
+     int index = -1;
+    for (int i = 0; i < size; i++) {
+      if(data[i].equals(s)) {
+        index = i;
       }
     }
-    return -1;
+    return index;
   }
 
   public String[] toArray() {
