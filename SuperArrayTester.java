@@ -91,6 +91,20 @@ public class SuperArrayTester {
     System.out.println(test);
     System.out.println(test.get(5));
 
-    System.out.println(test.indexOf("hello20"));
+    System.out.println(test.indexOf("yayayahngd"));
+
+    System.out.println(arrToString(test.toArray()));
+  }
+
+  public static String arrToString(String[] arr){
+    String newString = "[";
+    if (arr.length > 0){
+      for (int i = 0; i < arr.length - 1; i++){
+        newString += arr[i];
+        newString += ", ";
+      }
+      newString = newString + (arr[arr.length - 1]);
+    }
+    return (newString + "]");
   }
 }
