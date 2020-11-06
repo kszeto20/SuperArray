@@ -96,11 +96,13 @@ public class SuperArray {
     size++;
   }
 
-  public void remove(int index) {
+  public String remove(int index) {
+    String removed = data[index];
     for (int i = index; i < size; i++) {
       data[i] = data[i + 1];
     }
     size--;
+    return removed;
   }
 
   public int indexOf(String s) {
