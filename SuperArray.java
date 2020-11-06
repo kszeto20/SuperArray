@@ -63,16 +63,25 @@ public class SuperArray {
     data = new String[10];
     size = 0;
   }
-
+/*
   public String toString() {
     String full = "[";
     for (int i = 0; i < size - 1; i++) {
         full = full + data[i] + ", ";
       }
-        full = full + data[size - 1] + "]";
+        full = full + data[-1] + "]";
         return full;
   }
+*/
 
+public String toString() {
+    String full = "[";
+    for (int i = 0; i < size - 1; i++) {
+      full += data[i] + ", ";
+    }
+    full = full + data[size - 1] + "]";
+    return full;
+  }
   public boolean contains(String s) {
     if (size == 0){
       return false;
@@ -98,9 +107,10 @@ public class SuperArray {
 
   public String remove(int index) {
     String removed = data[index];
-    for (int i = index; i < size; i++) {
+    for (int i = index; i < size - 1; i++) {
       data[i] = data[i + 1];
     }
+    data[size - 1] = null;
     size--;
     return removed;
   }
