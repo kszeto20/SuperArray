@@ -25,7 +25,34 @@ public class Demo {
     }
     return cross;
   }
-  
+
+  public static SuperArray zip(SuperArray a, SuperArray b) {
+    SuperArray combo = new SuperArray();
+    if (a.size() > b.size()) {
+      for (int i = 0; i < a.size(); i++) {
+        if (i < b.size()) {
+          combo.add(a.get(i));
+          combo.add(b.get(i));
+        }
+        else {
+          combo.add(a.get(i));
+        }
+      }
+    }
+    else {
+      for (int i = 0; i < b.size(); i++) {
+        if (i < a.size()) {
+          combo.add(a.get(i));
+          combo.add(b.get(i));
+        }
+        else {
+          combo.add(b.get(i));
+        }
+      }
+    }
+    return combo;
+  }
+
 
   public static void main(String[]args){
     SuperArray words = new SuperArray();
