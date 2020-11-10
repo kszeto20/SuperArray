@@ -63,31 +63,30 @@ public class SuperArray {
     data = new String[10];
     size = 0;
   }
-/*
+
   public String toString() {
-    String full = "[";
-    for (int i = 0; i < size - 1; i++) {
+    String full = "";
+    for (int i = 0; i < data.length; i++) {
+      if (data[i] == null) {
+        full += "";
+      }
+      else if(i == size - 1) {
+        full = full + data[i];
+      }
+      else {
         full = full + data[i] + ", ";
       }
-        full = full + data[-1] + "]";
-        return full;
-  }
-*/
-
-public String toString() {
-    String full = "[";
-    for (int i = 0; i < size - 1; i++) {
-      full += data[i] + ", ";
     }
-    full = full + data[size - 1] + "]";
-    return full;
+    return "[" + full + "]";
   }
+
+
   public boolean contains(String s) {
     if (size == 0){
       return false;
     }
     for (int i = 0; i < size; i++) {
-      if (data[i] == s) {
+      if (data[i].equals(s)) {
         return true;
       }
     }
