@@ -131,4 +131,14 @@ public class SuperArray {
     }
     return onlyMem;
   }
+
+  public int lastIndexOf(String value) {
+    for (int i = size - 1; i > -1; i--) {
+      if (data[i].equals(value)) {
+        return i;
+      }
+    }
+    return -1;
+  }
+
 }
